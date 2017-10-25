@@ -4,7 +4,6 @@ from IPython.display import Image as showImage
 
 def mkfig(text,author,date,source):
     foreground = (255, 255, 255)
-    text = summary2
     font_path = "/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf"
     font = ImageFont.truetype(font_path, 20, encoding='unic')
     sourcefont = ImageFont.truetype(font_path, 24, encoding='unic')
