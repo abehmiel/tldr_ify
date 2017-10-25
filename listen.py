@@ -113,10 +113,13 @@ class StreamListener(tweepy.StreamListener):
                 summary = get_summary(article)
                 print("Summarized an article!")
                 print(summary)
-                print("Creating image macro")
-                filename = mkfig(summary, author, day, source)
-                status = "I summarized an article by "+source+":"
-                api.update_with_media(filename, status)
+                if len(summary) > 200:
+                    print("Creating image macro")
+                    filename = mkfig(summary, author, day, source)
+                    status = "I summarized an article by "+source+":"
+                    api.update_with_media(filename, status)
+                else:
+                    print("Summary is too short to continue") 
 
             except:
                 print("An exception occurred")
