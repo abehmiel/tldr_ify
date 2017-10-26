@@ -31,6 +31,6 @@ def mkfig(text,author,date,source):
     sourcefield = "―"+author+", "+source+", "+date
     draw.text((x_sourcepos, y_sourcepos), sourcefield, font=sourcefont, fill=foreground)
 
-    filename = 'img/'+author+date+source.replace(' ','')+'.png'
+    filename = 'img/'+author+date+source.replace(' ','')+'.jpg'
     bg.save(filename)
     return filename
