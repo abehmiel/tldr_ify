@@ -11,7 +11,7 @@ def scrape_buzzfeed_article(url):
     this_page = requests.get(url)
     soup = BeautifulSoup(this_page.content, 'lxml')
     article = []
-    for p in soup.find_all({"class": ["subbuzz-text", "js-subbuzz__title-text"]}):
+    for p in soup.find_all(class_ = ["subbuzz-text", "js-subbuzz__title-text"]):
         for q in p.find_all("p"):
             article.append(q.text)
 
